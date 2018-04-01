@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.10.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeSystem.cmake"
+  "../tests/CMakeLists.txt"
   "/home/ssaltykov/Загрузки/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CMakeCInformation.cmake"
   "/home/ssaltykov/Загрузки/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CMakeCXXInformation.cmake"
   "/home/ssaltykov/Загрузки/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake"
@@ -50,10 +51,14 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/wss_examples.dir/DependInfo.cmake"
   "CMakeFiles/ws_examples.dir/DependInfo.cmake"
+  "tests/CMakeFiles/io_test.dir/DependInfo.cmake"
+  "tests/CMakeFiles/crypto_test.dir/DependInfo.cmake"
+  "tests/CMakeFiles/parse_test.dir/DependInfo.cmake"
   )

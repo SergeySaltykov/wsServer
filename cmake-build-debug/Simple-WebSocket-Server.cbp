@@ -5,7 +5,7 @@
 		<Option title="Simple-WebSocket-Server"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\tests\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/ssaltykov/project/ws/cmake-build-debug"/>
@@ -72,6 +72,16 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/home/ssaltykov/project/ws/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -173,7 +183,160 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="io_test">
+				<Option output="/home/ssaltykov/project/ws/cmake-build-debug/tests/io_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ssaltykov/project/ws/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ssaltykov/project/ws"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 io_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="io_test/fast">
+				<Option output="/home/ssaltykov/project/ws/cmake-build-debug/tests/io_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ssaltykov/project/ws/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ssaltykov/project/ws"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 io_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="crypto_test">
+				<Option output="/home/ssaltykov/project/ws/cmake-build-debug/tests/crypto_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ssaltykov/project/ws/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ssaltykov/project/ws"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 crypto_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="crypto_test/fast">
+				<Option output="/home/ssaltykov/project/ws/cmake-build-debug/tests/crypto_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ssaltykov/project/ws/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ssaltykov/project/ws"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 crypto_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="parse_test">
+				<Option output="/home/ssaltykov/project/ws/cmake-build-debug/tests/parse_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ssaltykov/project/ws/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ssaltykov/project/ws"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 parse_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="parse_test/fast">
+				<Option output="/home/ssaltykov/project/ws/cmake-build-debug/tests/parse_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ssaltykov/project/ws/cmake-build-debug/tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ssaltykov/project/ws"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 parse_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ssaltykov/project/ws/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
+		<Unit filename="/home/ssaltykov/project/ws/tests/crypto_test.cpp">
+			<Option target="crypto_test"/>
+		</Unit>
+		<Unit filename="/home/ssaltykov/project/ws/tests/io_test.cpp">
+			<Option target="io_test"/>
+		</Unit>
+		<Unit filename="/home/ssaltykov/project/ws/tests/parse_test.cpp">
+			<Option target="parse_test"/>
+		</Unit>
 		<Unit filename="/home/ssaltykov/project/ws/ws_examples.cpp">
 			<Option target="ws_examples"/>
 		</Unit>
@@ -182,6 +345,9 @@
 		</Unit>
 		<Unit filename="/home/ssaltykov/project/ws/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/ssaltykov/project/ws/tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

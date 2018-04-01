@@ -124,6 +124,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/home/ssaltykov/Загрузки/clion-2018.1/bin/cmake/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ssaltykov/project/ws/cmake-build-debug/CMakeFiles /home/ssaltykov/project/ws/cmake-build-debug/CMakeFiles/progress.marks
@@ -181,6 +192,45 @@ ws_examples: cmake_check_build_system
 ws_examples/fast:
 	$(MAKE) -f CMakeFiles/ws_examples.dir/build.make CMakeFiles/ws_examples.dir/build
 .PHONY : ws_examples/fast
+
+#=============================================================================
+# Target rules for targets named io_test
+
+# Build rule for target.
+io_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 io_test
+.PHONY : io_test
+
+# fast build rule for target.
+io_test/fast:
+	$(MAKE) -f tests/CMakeFiles/io_test.dir/build.make tests/CMakeFiles/io_test.dir/build
+.PHONY : io_test/fast
+
+#=============================================================================
+# Target rules for targets named crypto_test
+
+# Build rule for target.
+crypto_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 crypto_test
+.PHONY : crypto_test
+
+# fast build rule for target.
+crypto_test/fast:
+	$(MAKE) -f tests/CMakeFiles/crypto_test.dir/build.make tests/CMakeFiles/crypto_test.dir/build
+.PHONY : crypto_test/fast
+
+#=============================================================================
+# Target rules for targets named parse_test
+
+# Build rule for target.
+parse_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 parse_test
+.PHONY : parse_test
+
+# fast build rule for target.
+parse_test/fast:
+	$(MAKE) -f tests/CMakeFiles/parse_test.dir/build.make tests/CMakeFiles/parse_test.dir/build
+.PHONY : parse_test/fast
 
 ws_examples.o: ws_examples.cpp.o
 
@@ -248,8 +298,12 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... wss_examples"
 	@echo "... ws_examples"
+	@echo "... io_test"
+	@echo "... crypto_test"
+	@echo "... parse_test"
 	@echo "... ws_examples.o"
 	@echo "... ws_examples.i"
 	@echo "... ws_examples.s"

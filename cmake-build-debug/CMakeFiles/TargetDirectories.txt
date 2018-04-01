@@ -4,5 +4,16 @@
 /home/ssaltykov/project/ws/cmake-build-debug/CMakeFiles/list_install_components.dir
 /home/ssaltykov/project/ws/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/ssaltykov/project/ws/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ssaltykov/project/ws/cmake-build-debug/CMakeFiles/test.dir
 /home/ssaltykov/project/ws/cmake-build-debug/CMakeFiles/wss_examples.dir
 /home/ssaltykov/project/ws/cmake-build-debug/CMakeFiles/ws_examples.dir
+/home/ssaltykov/project/ws/cmake-build-debug/tests/CMakeFiles/install/strip.dir
+/home/ssaltykov/project/ws/cmake-build-debug/tests/CMakeFiles/install/local.dir
+/home/ssaltykov/project/ws/cmake-build-debug/tests/CMakeFiles/install.dir
+/home/ssaltykov/project/ws/cmake-build-debug/tests/CMakeFiles/list_install_components.dir
+/home/ssaltykov/project/ws/cmake-build-debug/tests/CMakeFiles/rebuild_cache.dir
+/home/ssaltykov/project/ws/cmake-build-debug/tests/CMakeFiles/edit_cache.dir
+/home/ssaltykov/project/ws/cmake-build-debug/tests/CMakeFiles/test.dir
+/home/ssaltykov/project/ws/cmake-build-debug/tests/CMakeFiles/io_test.dir
+/home/ssaltykov/project/ws/cmake-build-debug/tests/CMakeFiles/crypto_test.dir
+/home/ssaltykov/project/ws/cmake-build-debug/tests/CMakeFiles/parse_test.dir
