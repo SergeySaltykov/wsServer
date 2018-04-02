@@ -6,81 +6,164 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Web socket client</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" >
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="bootstrap/style.css">
 </head>
 <body>
-       
-        <div>
-            <input type="text" id="messageinput"/>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 content">
+            <h1>Form of calculations</h1>
+            <form role="form">
+                <div class="form-group">
+                    <label for="inputParam1">Param 1</label>
+                    <input type="number" class="form-control" id="inputParam1" placeholder="Enter param 1">
+                    <p class="help-block">help-block 1</p>
+                </div>
+                <div class="form-group">
+                    <label for="inputParam2">Param 2</label>
+                    <input type="number" class="form-control" id="inputParam2" placeholder="Enter param 2">
+                    <p class="help-block">help-block 2</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Actions</h3>
+                        <div class="col-md-4">
+                            <button type="button" class="btn btn-default btn-block ">
+                                <span>+</span>
+                            </button>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="button" class="btn btn-default btn-block ">
+                                <span>-</span>
+                            </button>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="button" class="btn btn-default btn-block ">
+                                <span>×</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-20">
+                    <div class="col-md-6">
+                        <div class="col-md-4">
+                            <button type="button" class="btn btn-default btn-block ">
+                                <span>/</span>
+                            </button>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="button" class="btn btn-default btn-block ">
+                                <span>x<sup>2</sup></span>
+                            </button>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="button" class="btn btn-default btn-block ">
+                                <span>sin</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-20">
+                    <div class="col-md-6">
+                        <div class="col-md-4">
+                            <button type="button" class="btn btn-default btn-block ">
+                                <span>cos</span>
+                            </button>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="button" class="btn btn-default btn-block ">
+                                <span>x<sup>n</sup></span>
+                            </button>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="button" class="btn btn-default btn-block ">
+                                <span>log</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-20">
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-info btn-block bnt-lg text-center">Submit</button>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div>
-            <button type="button" onclick="openSocket();" >Open</button>
-            <button type="button" onclick="send();" >Send</button>
-            <button type="button" onclick="closeSocket();" >Close</button>
-        </div>
-        <!-- Server responses get written here -->
-        <div id="messages"></div>
+    </div>
+</div>
 
-        <!---->
-        <script src="jquery/jquery-3.3.1.js"></script>
-        <script src="bootstrap/js/bootstrap.js"></script>
-        <!-- Script to utilise the WebSocket -->
+<div>
+    <input type="text" id="messageinput"/>
+</div>
+<div>
+    <button type="button" onclick="openSocket();">Open</button>
+    <button type="button" onclick="send();">Send</button>
+    <button type="button" onclick="closeSocket();">Close</button>
+</div>
+<!-- Server responses get written here -->
+<div id="messages"></div>
+
+<!---->
+<script src="jquery/jquery-3.3.1.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+
+<!-- Script to utilise the WebSocket -->
+<script type="text/javascript">
+
+    var webSocket;
+    var messages = document.getElementById("messages");
 
 
-        <script type="text/javascript">
-                       
-            var webSocket;
-            var messages = document.getElementById("messages");
-           
-           
-            function h(){
-                // Ensures only one connection is open at a time
-                if(webSocket !== undefined && webSocket.readyState !== WebSocket.CLOSED){
-                   writeResponse("WebSocket is already opened.");
-                    return;
-                }
-                // Create a new instance of the websocket
-                webSocket = new WebSocket("ws://localhost:8080/compute");
-                 
-                /**
-                 * Binds functions to the listeners for the websocket.
-                 */
-                webSocket.onopen = function(event){
-                    // For reasons I can't determine, onopen gets called twice
-                    // and the first time event.data is undefined.
-                    // Leave a comment if you know the answer.
-                    if(event.data === undefined)
-                        return;
- 
-                    writeResponse(event.data);
-                };
- 
-                webSocket.onmessage = function(event){
-                    writeResponse(event.data);
-                };
- 
-                webSocket.onclose = function(event){
-                    writeResponse("Connection closed");
-                };
-            }
-           
-            /**
-             * Sends the value of the text input to the server
-             */
-            function send(){
-                var text = document.getElementById("messageinput").value;
-                webSocket.send(text);
-            }
-           
-            function closeSocket(){
-                webSocket.close();
-            }
- 
-            function writeResponse(text){
-                messages.innerHTML += "<br/>" + text;
-            }
-           
-        </script>
+    function h() {
+        // Ensures only one connection is open at a time
+        if (webSocket !== undefined && webSocket.readyState !== WebSocket.CLOSED) {
+            writeResponse("WebSocket is already opened.");
+            return;
+        }
+        // Create a new instance of the websocket
+        webSocket = new WebSocket("ws://localhost:8080/compute");
+
+        /**
+         * Binds functions to the listeners for the websocket.
+         */
+        webSocket.onopen = function (event) {
+            // For reasons I can't determine, onopen gets called twice
+            // and the first time event.data is undefined.
+            // Leave a comment if you know the answer.
+            if (event.data === undefined)
+                return;
+
+            writeResponse(event.data);
+        };
+
+        webSocket.onmessage = function (event) {
+            writeResponse(event.data);
+        };
+
+        webSocket.onclose = function (event) {
+            writeResponse("Connection closed");
+        };
+    }
+
+    /**
+     * Sends the value of the text input to the server
+     */
+    function send() {
+        var text = document.getElementById("messageinput").value;
+        webSocket.send(text);
+    }
+
+    function closeSocket() {
+        webSocket.close();
+    }
+
+    function writeResponse(text) {
+        messages.innerHTML += "<br/>" + text;
+    }
+
+</script>
 
 </body>
 </html>
