@@ -3,7 +3,6 @@
 
 CMakeFiles/ws_examples.dir/ws_examples.cpp.o: ../rapidjson/error/error.h
 CMakeFiles/ws_examples.dir/ws_examples.cpp.o: ../rapidjson/reader.h
-CMakeFiles/ws_examples.dir/ws_examples.cpp.o: ../client_ws.hpp
 CMakeFiles/ws_examples.dir/ws_examples.cpp.o: ../crypto.hpp
 CMakeFiles/ws_examples.dir/ws_examples.cpp.o: ../rapidjson/allocators.h
 CMakeFiles/ws_examples.dir/ws_examples.cpp.o: ../rapidjson/document.h

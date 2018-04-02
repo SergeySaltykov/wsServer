@@ -60,50 +60,13 @@ CMAKE_SOURCE_DIR = /home/sergey/project/ws/wsServer
 CMAKE_BINARY_DIR = /home/sergey/project/ws/wsServer/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/wss_examples.dir
-
-# All Build rule for target.
-CMakeFiles/wss_examples.dir/all:
-	$(MAKE) -f CMakeFiles/wss_examples.dir/build.make CMakeFiles/wss_examples.dir/depend
-	$(MAKE) -f CMakeFiles/wss_examples.dir/build.make CMakeFiles/wss_examples.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target wss_examples"
-.PHONY : CMakeFiles/wss_examples.dir/all
-
-# Include target in all.
-all: CMakeFiles/wss_examples.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/wss_examples.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/wss_examples.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/wss_examples.dir/rule
-
-# Convenience name for target.
-wss_examples: CMakeFiles/wss_examples.dir/rule
-
-.PHONY : wss_examples
-
-# clean rule for target.
-CMakeFiles/wss_examples.dir/clean:
-	$(MAKE) -f CMakeFiles/wss_examples.dir/build.make CMakeFiles/wss_examples.dir/clean
-.PHONY : CMakeFiles/wss_examples.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/wss_examples.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/ws_examples.dir
 
 # All Build rule for target.
 CMakeFiles/ws_examples.dir/all:
 	$(MAKE) -f CMakeFiles/ws_examples.dir/build.make CMakeFiles/ws_examples.dir/depend
 	$(MAKE) -f CMakeFiles/ws_examples.dir/build.make CMakeFiles/ws_examples.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target ws_examples"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target ws_examples"
 .PHONY : CMakeFiles/ws_examples.dir/all
 
 # Include target in all.
@@ -130,139 +93,6 @@ CMakeFiles/ws_examples.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/ws_examples.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory tests
-
-# Convenience name for "all" pass in the directory.
-tests/all: tests/CMakeFiles/io_test.dir/all
-tests/all: tests/CMakeFiles/crypto_test.dir/all
-tests/all: tests/CMakeFiles/parse_test.dir/all
-
-.PHONY : tests/all
-
-# Convenience name for "clean" pass in the directory.
-tests/clean: tests/CMakeFiles/io_test.dir/clean
-tests/clean: tests/CMakeFiles/crypto_test.dir/clean
-tests/clean: tests/CMakeFiles/parse_test.dir/clean
-
-.PHONY : tests/clean
-
-# Convenience name for "preinstall" pass in the directory.
-tests/preinstall:
-
-.PHONY : tests/preinstall
-
-#=============================================================================
-# Target rules for target tests/CMakeFiles/io_test.dir
-
-# All Build rule for target.
-tests/CMakeFiles/io_test.dir/all:
-	$(MAKE) -f tests/CMakeFiles/io_test.dir/build.make tests/CMakeFiles/io_test.dir/depend
-	$(MAKE) -f tests/CMakeFiles/io_test.dir/build.make tests/CMakeFiles/io_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target io_test"
-.PHONY : tests/CMakeFiles/io_test.dir/all
-
-# Include target in all.
-all: tests/CMakeFiles/io_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-tests/CMakeFiles/io_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/io_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles 0
-.PHONY : tests/CMakeFiles/io_test.dir/rule
-
-# Convenience name for target.
-io_test: tests/CMakeFiles/io_test.dir/rule
-
-.PHONY : io_test
-
-# clean rule for target.
-tests/CMakeFiles/io_test.dir/clean:
-	$(MAKE) -f tests/CMakeFiles/io_test.dir/build.make tests/CMakeFiles/io_test.dir/clean
-.PHONY : tests/CMakeFiles/io_test.dir/clean
-
-# clean rule for target.
-clean: tests/CMakeFiles/io_test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target tests/CMakeFiles/crypto_test.dir
-
-# All Build rule for target.
-tests/CMakeFiles/crypto_test.dir/all:
-	$(MAKE) -f tests/CMakeFiles/crypto_test.dir/build.make tests/CMakeFiles/crypto_test.dir/depend
-	$(MAKE) -f tests/CMakeFiles/crypto_test.dir/build.make tests/CMakeFiles/crypto_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target crypto_test"
-.PHONY : tests/CMakeFiles/crypto_test.dir/all
-
-# Include target in all.
-all: tests/CMakeFiles/crypto_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-tests/CMakeFiles/crypto_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/crypto_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles 0
-.PHONY : tests/CMakeFiles/crypto_test.dir/rule
-
-# Convenience name for target.
-crypto_test: tests/CMakeFiles/crypto_test.dir/rule
-
-.PHONY : crypto_test
-
-# clean rule for target.
-tests/CMakeFiles/crypto_test.dir/clean:
-	$(MAKE) -f tests/CMakeFiles/crypto_test.dir/build.make tests/CMakeFiles/crypto_test.dir/clean
-.PHONY : tests/CMakeFiles/crypto_test.dir/clean
-
-# clean rule for target.
-clean: tests/CMakeFiles/crypto_test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target tests/CMakeFiles/parse_test.dir
-
-# All Build rule for target.
-tests/CMakeFiles/parse_test.dir/all:
-	$(MAKE) -f tests/CMakeFiles/parse_test.dir/build.make tests/CMakeFiles/parse_test.dir/depend
-	$(MAKE) -f tests/CMakeFiles/parse_test.dir/build.make tests/CMakeFiles/parse_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target parse_test"
-.PHONY : tests/CMakeFiles/parse_test.dir/all
-
-# Include target in all.
-all: tests/CMakeFiles/parse_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-tests/CMakeFiles/parse_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/parse_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles 0
-.PHONY : tests/CMakeFiles/parse_test.dir/rule
-
-# Convenience name for target.
-parse_test: tests/CMakeFiles/parse_test.dir/rule
-
-.PHONY : parse_test
-
-# clean rule for target.
-tests/CMakeFiles/parse_test.dir/clean:
-	$(MAKE) -f tests/CMakeFiles/parse_test.dir/build.make tests/CMakeFiles/parse_test.dir/clean
-.PHONY : tests/CMakeFiles/parse_test.dir/clean
-
-# clean rule for target.
-clean: tests/CMakeFiles/parse_test.dir/clean
 
 .PHONY : clean
 

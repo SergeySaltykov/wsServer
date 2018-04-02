@@ -124,17 +124,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/home/sergey/Загрузки/CLion-2018.1/clion-2018.1/bin/cmake/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles /home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles/progress.marks
@@ -168,19 +157,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named wss_examples
-
-# Build rule for target.
-wss_examples: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 wss_examples
-.PHONY : wss_examples
-
-# fast build rule for target.
-wss_examples/fast:
-	$(MAKE) -f CMakeFiles/wss_examples.dir/build.make CMakeFiles/wss_examples.dir/build
-.PHONY : wss_examples/fast
-
-#=============================================================================
 # Target rules for targets named ws_examples
 
 # Build rule for target.
@@ -192,45 +168,6 @@ ws_examples: cmake_check_build_system
 ws_examples/fast:
 	$(MAKE) -f CMakeFiles/ws_examples.dir/build.make CMakeFiles/ws_examples.dir/build
 .PHONY : ws_examples/fast
-
-#=============================================================================
-# Target rules for targets named io_test
-
-# Build rule for target.
-io_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 io_test
-.PHONY : io_test
-
-# fast build rule for target.
-io_test/fast:
-	$(MAKE) -f tests/CMakeFiles/io_test.dir/build.make tests/CMakeFiles/io_test.dir/build
-.PHONY : io_test/fast
-
-#=============================================================================
-# Target rules for targets named crypto_test
-
-# Build rule for target.
-crypto_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 crypto_test
-.PHONY : crypto_test
-
-# fast build rule for target.
-crypto_test/fast:
-	$(MAKE) -f tests/CMakeFiles/crypto_test.dir/build.make tests/CMakeFiles/crypto_test.dir/build
-.PHONY : crypto_test/fast
-
-#=============================================================================
-# Target rules for targets named parse_test
-
-# Build rule for target.
-parse_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 parse_test
-.PHONY : parse_test
-
-# fast build rule for target.
-parse_test/fast:
-	$(MAKE) -f tests/CMakeFiles/parse_test.dir/build.make tests/CMakeFiles/parse_test.dir/build
-.PHONY : parse_test/fast
 
 ws_examples.o: ws_examples.cpp.o
 
@@ -259,33 +196,6 @@ ws_examples.cpp.s:
 	$(MAKE) -f CMakeFiles/ws_examples.dir/build.make CMakeFiles/ws_examples.dir/ws_examples.cpp.s
 .PHONY : ws_examples.cpp.s
 
-wss_examples.o: wss_examples.cpp.o
-
-.PHONY : wss_examples.o
-
-# target to build an object file
-wss_examples.cpp.o:
-	$(MAKE) -f CMakeFiles/wss_examples.dir/build.make CMakeFiles/wss_examples.dir/wss_examples.cpp.o
-.PHONY : wss_examples.cpp.o
-
-wss_examples.i: wss_examples.cpp.i
-
-.PHONY : wss_examples.i
-
-# target to preprocess a source file
-wss_examples.cpp.i:
-	$(MAKE) -f CMakeFiles/wss_examples.dir/build.make CMakeFiles/wss_examples.dir/wss_examples.cpp.i
-.PHONY : wss_examples.cpp.i
-
-wss_examples.s: wss_examples.cpp.s
-
-.PHONY : wss_examples.s
-
-# target to generate assembly for a file
-wss_examples.cpp.s:
-	$(MAKE) -f CMakeFiles/wss_examples.dir/build.make CMakeFiles/wss_examples.dir/wss_examples.cpp.s
-.PHONY : wss_examples.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -298,18 +208,10 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... wss_examples"
 	@echo "... ws_examples"
-	@echo "... io_test"
-	@echo "... crypto_test"
-	@echo "... parse_test"
 	@echo "... ws_examples.o"
 	@echo "... ws_examples.i"
 	@echo "... ws_examples.s"
-	@echo "... wss_examples.o"
-	@echo "... wss_examples.i"
-	@echo "... wss_examples.s"
 .PHONY : help
 
 

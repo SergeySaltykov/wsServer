@@ -4,7 +4,6 @@
 CMakeFiles/ws_examples.dir/ws_examples.cpp.o
  ..//rapidjson/error/error.h
  ..//rapidjson/reader.h
- /home/sergey/project/ws/wsServer/client_ws.hpp
  /home/sergey/project/ws/wsServer/crypto.hpp
  /home/sergey/project/ws/wsServer/rapidjson/allocators.h
  /home/sergey/project/ws/wsServer/rapidjson/document.h

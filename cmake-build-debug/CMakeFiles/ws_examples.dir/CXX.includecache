@@ -42,34 +42,6 @@ rapidjson/reader.h
 error/error.h
 ../rapidjson/error/error.h
 
-/home/sergey/project/ws/wsServer/client_ws.hpp
-crypto.hpp
-/home/sergey/project/ws/wsServer/crypto.hpp
-utility.hpp
-/home/sergey/project/ws/wsServer/utility.hpp
-array
--
-atomic
--
-iostream
--
-limits
--
-list
--
-mutex
--
-random
--
-asio.hpp
--
-asio/steady_timer.hpp
--
-boost/asio.hpp
--
-boost/asio/steady_timer.hpp
--
-
 /home/sergey/project/ws/wsServer/crypto.hpp
 cmath
 -
@@ -375,8 +347,6 @@ intrin.h
 -
 
 /home/sergey/project/ws/wsServer/ws_examples.cpp
-client_ws.hpp
-/home/sergey/project/ws/wsServer/client_ws.hpp
 server_ws.hpp
 /home/sergey/project/ws/wsServer/server_ws.hpp
 rapidjson/document.h
