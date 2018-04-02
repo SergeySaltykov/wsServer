@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/ssaltykov/Загрузки/clion-2018.1/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/sergey/Загрузки/CLion-2018.1/clion-2018.1/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/ssaltykov/Загрузки/clion-2018.1/bin/cmake/bin/cmake -E remove -f
+RM = /home/sergey/Загрузки/CLion-2018.1/clion-2018.1/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ssaltykov/project/ws
+CMAKE_SOURCE_DIR = /home/sergey/project/ws/wsServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ssaltykov/project/ws/cmake-build-debug
+CMAKE_BINARY_DIR = /home/sergey/project/ws/wsServer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,37 +59,37 @@ CMAKE_BINARY_DIR = /home/ssaltykov/project/ws/cmake-build-debug
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/ssaltykov/Загрузки/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/sergey/Загрузки/CLion-2018.1/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/ssaltykov/Загрузки/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/sergey/Загрузки/CLion-2018.1/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/ssaltykov/Загрузки/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/sergey/Загрузки/CLion-2018.1/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/ssaltykov/Загрузки/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/sergey/Загрузки/CLion-2018.1/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/ssaltykov/Загрузки/clion-2018.1/bin/cmake/bin/cmake -P cmake_install.cmake
+	/home/sergey/Загрузки/CLion-2018.1/clion-2018.1/bin/cmake/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/ssaltykov/Загрузки/clion-2018.1/bin/cmake/bin/cmake -P cmake_install.cmake
+	/home/sergey/Загрузки/CLion-2018.1/clion-2018.1/bin/cmake/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target list_install_components
@@ -105,7 +105,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/ssaltykov/Загрузки/clion-2018.1/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/sergey/Загрузки/CLion-2018.1/clion-2018.1/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -116,7 +116,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/ssaltykov/Загрузки/clion-2018.1/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/sergey/Загрузки/CLion-2018.1/clion-2018.1/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -127,7 +127,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/home/ssaltykov/Загрузки/clion-2018.1/bin/cmake/bin/ctest --force-new-ctest-process $(ARGS)
+	/home/sergey/Загрузки/CLion-2018.1/clion-2018.1/bin/cmake/bin/ctest --force-new-ctest-process $(ARGS)
 .PHONY : test
 
 # Special rule for the target test
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/ssaltykov/project/ws/cmake-build-debug/CMakeFiles /home/ssaltykov/project/ws/cmake-build-debug/tests/CMakeFiles/progress.marks
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ssaltykov/project/ws/cmake-build-debug/CMakeFiles 0
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles /home/sergey/project/ws/wsServer/cmake-build-debug/tests/CMakeFiles/progress.marks
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/clean
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tests/CMakeFiles/io_test.dir/rule:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/io_test.dir/rule
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/io_test.dir/rule
 .PHONY : tests/CMakeFiles/io_test.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ io_test: tests/CMakeFiles/io_test.dir/rule
 
 # fast build rule for target.
 io_test/fast:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/io_test.dir/build.make tests/CMakeFiles/io_test.dir/build
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/io_test.dir/build.make tests/CMakeFiles/io_test.dir/build
 .PHONY : io_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/crypto_test.dir/rule:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/crypto_test.dir/rule
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/crypto_test.dir/rule
 .PHONY : tests/CMakeFiles/crypto_test.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ crypto_test: tests/CMakeFiles/crypto_test.dir/rule
 
 # fast build rule for target.
 crypto_test/fast:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/crypto_test.dir/build.make tests/CMakeFiles/crypto_test.dir/build
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/crypto_test.dir/build.make tests/CMakeFiles/crypto_test.dir/build
 .PHONY : crypto_test/fast
 
 # Convenience name for target.
 tests/CMakeFiles/parse_test.dir/rule:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/parse_test.dir/rule
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/parse_test.dir/rule
 .PHONY : tests/CMakeFiles/parse_test.dir/rule
 
 # Convenience name for target.
@@ -209,7 +209,7 @@ parse_test: tests/CMakeFiles/parse_test.dir/rule
 
 # fast build rule for target.
 parse_test/fast:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/parse_test.dir/build.make tests/CMakeFiles/parse_test.dir/build
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/parse_test.dir/build.make tests/CMakeFiles/parse_test.dir/build
 .PHONY : parse_test/fast
 
 crypto_test.o: crypto_test.cpp.o
@@ -218,7 +218,7 @@ crypto_test.o: crypto_test.cpp.o
 
 # target to build an object file
 crypto_test.cpp.o:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/crypto_test.dir/build.make tests/CMakeFiles/crypto_test.dir/crypto_test.cpp.o
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/crypto_test.dir/build.make tests/CMakeFiles/crypto_test.dir/crypto_test.cpp.o
 .PHONY : crypto_test.cpp.o
 
 crypto_test.i: crypto_test.cpp.i
@@ -227,7 +227,7 @@ crypto_test.i: crypto_test.cpp.i
 
 # target to preprocess a source file
 crypto_test.cpp.i:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/crypto_test.dir/build.make tests/CMakeFiles/crypto_test.dir/crypto_test.cpp.i
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/crypto_test.dir/build.make tests/CMakeFiles/crypto_test.dir/crypto_test.cpp.i
 .PHONY : crypto_test.cpp.i
 
 crypto_test.s: crypto_test.cpp.s
@@ -236,7 +236,7 @@ crypto_test.s: crypto_test.cpp.s
 
 # target to generate assembly for a file
 crypto_test.cpp.s:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/crypto_test.dir/build.make tests/CMakeFiles/crypto_test.dir/crypto_test.cpp.s
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/crypto_test.dir/build.make tests/CMakeFiles/crypto_test.dir/crypto_test.cpp.s
 .PHONY : crypto_test.cpp.s
 
 io_test.o: io_test.cpp.o
@@ -245,7 +245,7 @@ io_test.o: io_test.cpp.o
 
 # target to build an object file
 io_test.cpp.o:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/io_test.dir/build.make tests/CMakeFiles/io_test.dir/io_test.cpp.o
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/io_test.dir/build.make tests/CMakeFiles/io_test.dir/io_test.cpp.o
 .PHONY : io_test.cpp.o
 
 io_test.i: io_test.cpp.i
@@ -254,7 +254,7 @@ io_test.i: io_test.cpp.i
 
 # target to preprocess a source file
 io_test.cpp.i:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/io_test.dir/build.make tests/CMakeFiles/io_test.dir/io_test.cpp.i
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/io_test.dir/build.make tests/CMakeFiles/io_test.dir/io_test.cpp.i
 .PHONY : io_test.cpp.i
 
 io_test.s: io_test.cpp.s
@@ -263,7 +263,7 @@ io_test.s: io_test.cpp.s
 
 # target to generate assembly for a file
 io_test.cpp.s:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/io_test.dir/build.make tests/CMakeFiles/io_test.dir/io_test.cpp.s
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/io_test.dir/build.make tests/CMakeFiles/io_test.dir/io_test.cpp.s
 .PHONY : io_test.cpp.s
 
 parse_test.o: parse_test.cpp.o
@@ -272,7 +272,7 @@ parse_test.o: parse_test.cpp.o
 
 # target to build an object file
 parse_test.cpp.o:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/parse_test.dir/build.make tests/CMakeFiles/parse_test.dir/parse_test.cpp.o
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/parse_test.dir/build.make tests/CMakeFiles/parse_test.dir/parse_test.cpp.o
 .PHONY : parse_test.cpp.o
 
 parse_test.i: parse_test.cpp.i
@@ -281,7 +281,7 @@ parse_test.i: parse_test.cpp.i
 
 # target to preprocess a source file
 parse_test.cpp.i:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/parse_test.dir/build.make tests/CMakeFiles/parse_test.dir/parse_test.cpp.i
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/parse_test.dir/build.make tests/CMakeFiles/parse_test.dir/parse_test.cpp.i
 .PHONY : parse_test.cpp.i
 
 parse_test.s: parse_test.cpp.s
@@ -290,7 +290,7 @@ parse_test.s: parse_test.cpp.s
 
 # target to generate assembly for a file
 parse_test.cpp.s:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/parse_test.dir/build.make tests/CMakeFiles/parse_test.dir/parse_test.cpp.s
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/parse_test.dir/build.make tests/CMakeFiles/parse_test.dir/parse_test.cpp.s
 .PHONY : parse_test.cpp.s
 
 # Help Target
@@ -329,6 +329,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/ssaltykov/project/ws/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/sergey/project/ws/wsServer/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

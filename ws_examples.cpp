@@ -34,7 +34,7 @@ int main() {
         auto send_stream = make_shared<WsServer::SendStream>();
 
         cout << "Server: Message received: \"" << message_str << "\" from " << connection.get() << endl;
-
+        // {"x":2,"y":4,"action":"add","id":4} формат отправки данных
         rapidjson::Document document;
         document.Parse(message_str.c_str());
 

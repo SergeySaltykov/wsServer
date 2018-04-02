@@ -1,4 +1,4 @@
-# Install script for directory: /home/ssaltykov/project/ws/tests
+# Install script for directory: /home/sergey/project/ws/wsServer/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

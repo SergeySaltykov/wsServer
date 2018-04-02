@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=c++11 -Wall -Wextra -Wsign-conversion -fno-access-control
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ssaltykov/project/ws 
+CXX_INCLUDES = -I/home/sergey/project/ws/wsServer 
 
