@@ -38,6 +38,7 @@ int main() {
         cout << "Y: " << y.GetFloat() << endl;
         cout << "Action: " << action.GetString() << endl;
 
+
         if (action == "add") {
             *send_stream << getResult(x.GetFloat() + y.GetFloat(), id);
         } else if (action == "multiplication") {
