@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/sergey/project/ws/wsServer/ws_examples.cpp" "/home/sergey/project/ws/wsServer/cmake-build-debug/CMakeFiles/ws_examples.dir/ws_examples.cpp.o"
+  "/home/ssaltykov/project/ws/wsServer/ws_examples.cpp" "/home/ssaltykov/project/ws/wsServer/cmake-build-debug/CMakeFiles/ws_examples.dir/ws_examples.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

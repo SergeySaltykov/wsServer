@@ -1,4 +1,4 @@
-# Install script for directory: /home/sergey/project/ws/wsServer
+# Install script for directory: /home/ssaltykov/project/ws/wsServer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,13 +39,13 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/simple-websocket-server" TYPE FILE FILES
-    "/home/sergey/project/ws/wsServer/server_ws.hpp"
-    "/home/sergey/project/ws/wsServer/client_ws.hpp"
-    "/home/sergey/project/ws/wsServer/server_wss.hpp"
-    "/home/sergey/project/ws/wsServer/client_wss.hpp"
-    "/home/sergey/project/ws/wsServer/crypto.hpp"
-    "/home/sergey/project/ws/wsServer/utility.hpp"
-    "/home/sergey/project/ws/wsServer/status_code.hpp"
+    "/home/ssaltykov/project/ws/wsServer/server_ws.hpp"
+    "/home/ssaltykov/project/ws/wsServer/client_ws.hpp"
+    "/home/ssaltykov/project/ws/wsServer/server_wss.hpp"
+    "/home/ssaltykov/project/ws/wsServer/client_wss.hpp"
+    "/home/ssaltykov/project/ws/wsServer/crypto.hpp"
+    "/home/ssaltykov/project/ws/wsServer/utility.hpp"
+    "/home/ssaltykov/project/ws/wsServer/status_code.hpp"
     )
 endif()
 
@@ -57,5 +57,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/sergey/project/ws/wsServer/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ssaltykov/project/ws/wsServer/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

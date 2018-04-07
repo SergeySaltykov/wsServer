@@ -29,17 +29,17 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h3>Actions</h3>
-                        <div class="col-md-4">
+                        <div class="col-xs-4">
                             <button type="button" class="btn btn-default btn-block ">
                                 <span>+</span>
                             </button>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-xs-4">
                             <button type="button" class="btn btn-default btn-block ">
                                 <span>-</span>
                             </button>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-xs-4">
                             <button type="button" class="btn btn-default btn-block ">
                                 <span>×</span>
                             </button>
@@ -48,17 +48,17 @@
                 </div>
                 <div class="row mt-20">
                     <div class="col-md-6">
-                        <div class="col-md-4">
+                        <div class="col-xs-4">
                             <button type="button" class="btn btn-default btn-block ">
                                 <span>/</span>
                             </button>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-xs-4">
                             <button type="button" class="btn btn-default btn-block ">
                                 <span>x<sup>2</sup></span>
                             </button>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-xs-4">
                             <button type="button" class="btn btn-default btn-block ">
                                 <span>sin</span>
                             </button>
@@ -67,17 +67,17 @@
                 </div>
                 <div class="row mt-20">
                     <div class="col-md-6">
-                        <div class="col-md-4">
+                        <div class="col-xs-4">
                             <button type="button" class="btn btn-default btn-block ">
                                 <span>cos</span>
                             </button>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-xs-4">
                             <button type="button" class="btn btn-default btn-block ">
                                 <span>x<sup>n</sup></span>
                             </button>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-xs-4">
                             <button type="button" class="btn btn-default btn-block ">
                                 <span>log</span>
                             </button>
@@ -85,7 +85,7 @@
                     </div>
                 </div>
                 <div class="row mt-20">
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <button type="submit" class="btn btn-info btn-block bnt-lg text-center">Submit</button>
                     </div>
                 </div>
@@ -93,7 +93,9 @@
         </div>
     </div>
 </div>
-
+<br>
+<br>
+<br>
 <div>
     <input type="text" id="messageinput"/>
 </div>
@@ -116,7 +118,7 @@
     var messages = document.getElementById("messages");
 
 
-    function h() {
+    function openSocket() {
         // Ensures only one connection is open at a time
         if (webSocket !== undefined && webSocket.readyState !== WebSocket.CLOSED) {
             writeResponse("WebSocket is already opened.");

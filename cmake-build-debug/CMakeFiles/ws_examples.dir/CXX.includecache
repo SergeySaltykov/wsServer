@@ -42,7 +42,7 @@ rapidjson/reader.h
 error/error.h
 ../rapidjson/error/error.h
 
-/home/sergey/project/ws/wsServer/crypto.hpp
+/home/ssaltykov/project/ws/wsServer/crypto.hpp
 cmath
 -
 iomanip
@@ -64,21 +64,21 @@ openssl/md5.h
 openssl/sha.h
 -
 
-/home/sergey/project/ws/wsServer/rapidjson/allocators.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/allocators.h
 rapidjson.h
-/home/sergey/project/ws/wsServer/rapidjson/rapidjson.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/rapidjson.h
 
-/home/sergey/project/ws/wsServer/rapidjson/document.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/document.h
 reader.h
-/home/sergey/project/ws/wsServer/rapidjson/reader.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/reader.h
 internal/meta.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/meta.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/meta.h
 internal/strfunc.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/strfunc.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/strfunc.h
 memorystream.h
-/home/sergey/project/ws/wsServer/rapidjson/memorystream.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/memorystream.h
 encodedstream.h
-/home/sergey/project/ws/wsServer/rapidjson/encodedstream.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/encodedstream.h
 new
 -
 limits
@@ -88,95 +88,95 @@ iterator
 utility
 -
 
-/home/sergey/project/ws/wsServer/rapidjson/encodedstream.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/encodedstream.h
 stream.h
-/home/sergey/project/ws/wsServer/rapidjson/stream.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/stream.h
 memorystream.h
-/home/sergey/project/ws/wsServer/rapidjson/memorystream.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/memorystream.h
 
-/home/sergey/project/ws/wsServer/rapidjson/encodings.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/encodings.h
 rapidjson.h
-/home/sergey/project/ws/wsServer/rapidjson/rapidjson.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/rapidjson.h
 
-/home/sergey/project/ws/wsServer/rapidjson/error/error.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/error/error.h
 ../rapidjson.h
-/home/sergey/project/ws/wsServer/rapidjson/rapidjson.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/rapidjson.h
 
-/home/sergey/project/ws/wsServer/rapidjson/internal/biginteger.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/biginteger.h
 ../rapidjson.h
-/home/sergey/project/ws/wsServer/rapidjson/rapidjson.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/rapidjson.h
 intrin.h
 -
 
-/home/sergey/project/ws/wsServer/rapidjson/internal/diyfp.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/diyfp.h
 ../rapidjson.h
-/home/sergey/project/ws/wsServer/rapidjson/rapidjson.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/rapidjson.h
 intrin.h
 -
 
-/home/sergey/project/ws/wsServer/rapidjson/internal/dtoa.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/dtoa.h
 itoa.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/itoa.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/itoa.h
 diyfp.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/diyfp.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/diyfp.h
 ieee754.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/ieee754.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/ieee754.h
 
-/home/sergey/project/ws/wsServer/rapidjson/internal/ieee754.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/ieee754.h
 ../rapidjson.h
-/home/sergey/project/ws/wsServer/rapidjson/rapidjson.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/rapidjson.h
 
-/home/sergey/project/ws/wsServer/rapidjson/internal/itoa.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/itoa.h
 ../rapidjson.h
-/home/sergey/project/ws/wsServer/rapidjson/rapidjson.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/rapidjson.h
 
-/home/sergey/project/ws/wsServer/rapidjson/internal/meta.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/meta.h
 ../rapidjson.h
-/home/sergey/project/ws/wsServer/rapidjson/rapidjson.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/rapidjson.h
 type_traits
 -
 
-/home/sergey/project/ws/wsServer/rapidjson/internal/pow10.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/pow10.h
 ../rapidjson.h
-/home/sergey/project/ws/wsServer/rapidjson/rapidjson.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/rapidjson.h
 
-/home/sergey/project/ws/wsServer/rapidjson/internal/stack.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/stack.h
 ../allocators.h
-/home/sergey/project/ws/wsServer/rapidjson/allocators.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/allocators.h
 swap.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/swap.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/swap.h
 
-/home/sergey/project/ws/wsServer/rapidjson/internal/strfunc.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/strfunc.h
 ../stream.h
-/home/sergey/project/ws/wsServer/rapidjson/stream.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/stream.h
 cwchar
 -
 
-/home/sergey/project/ws/wsServer/rapidjson/internal/strtod.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/strtod.h
 ieee754.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/ieee754.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/ieee754.h
 biginteger.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/biginteger.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/biginteger.h
 diyfp.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/diyfp.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/diyfp.h
 pow10.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/pow10.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/pow10.h
 
-/home/sergey/project/ws/wsServer/rapidjson/internal/swap.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/swap.h
 ../rapidjson.h
-/home/sergey/project/ws/wsServer/rapidjson/rapidjson.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/rapidjson.h
 
-/home/sergey/project/ws/wsServer/rapidjson/memorystream.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/memorystream.h
 stream.h
-/home/sergey/project/ws/wsServer/rapidjson/stream.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/stream.h
 
-/home/sergey/project/ws/wsServer/rapidjson/msinttypes/inttypes.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/msinttypes/inttypes.h
 stdint.h
-/home/sergey/project/ws/wsServer/rapidjson/msinttypes/stdint.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/msinttypes/stdint.h
 inttypes.h
 -
 
-/home/sergey/project/ws/wsServer/rapidjson/msinttypes/stdint.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/msinttypes/stdint.h
 stdint.h
 -
 limits.h
@@ -184,19 +184,19 @@ limits.h
 wchar.h
 -
 
-/home/sergey/project/ws/wsServer/rapidjson/rapidjson.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/rapidjson.h
 cstdlib
 -
 cstring
 -
 rapidjson/...
-/home/sergey/project/ws/wsServer/rapidjson/rapidjson/...
+/home/ssaltykov/project/ws/wsServer/rapidjson/rapidjson/...
 string
 -
 msinttypes/stdint.h
-/home/sergey/project/ws/wsServer/rapidjson/msinttypes/stdint.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/msinttypes/stdint.h
 msinttypes/inttypes.h
-/home/sergey/project/ws/wsServer/rapidjson/msinttypes/inttypes.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/msinttypes/inttypes.h
 stdint.h
 -
 inttypes.h
@@ -204,23 +204,23 @@ inttypes.h
 endian.h
 -
 rapidjson/...
-/home/sergey/project/ws/wsServer/rapidjson/rapidjson/...
+/home/ssaltykov/project/ws/wsServer/rapidjson/rapidjson/...
 cassert
 -
 
-/home/sergey/project/ws/wsServer/rapidjson/reader.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/reader.h
 allocators.h
-/home/sergey/project/ws/wsServer/rapidjson/allocators.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/allocators.h
 stream.h
-/home/sergey/project/ws/wsServer/rapidjson/stream.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/stream.h
 encodedstream.h
-/home/sergey/project/ws/wsServer/rapidjson/encodedstream.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/encodedstream.h
 internal/meta.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/meta.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/meta.h
 internal/stack.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/stack.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/stack.h
 internal/strtod.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/strtod.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/strtod.h
 limits
 -
 intrin.h
@@ -234,43 +234,43 @@ arm_neon.h
 stdexcept
 -
 rapidjson/error/error.h
-/home/sergey/project/ws/wsServer/rapidjson/rapidjson/error/error.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/rapidjson/error/error.h
 rapidjson/reader.h
-/home/sergey/project/ws/wsServer/rapidjson/rapidjson/reader.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/rapidjson/reader.h
 error/error.h
-/home/sergey/project/ws/wsServer/rapidjson/error/error.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/error/error.h
 
-/home/sergey/project/ws/wsServer/rapidjson/stream.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/stream.h
 rapidjson.h
-/home/sergey/project/ws/wsServer/rapidjson/rapidjson.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/rapidjson.h
 encodings.h
-/home/sergey/project/ws/wsServer/rapidjson/encodings.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/encodings.h
 
-/home/sergey/project/ws/wsServer/rapidjson/stringbuffer.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/stringbuffer.h
 stream.h
-/home/sergey/project/ws/wsServer/rapidjson/stream.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/stream.h
 internal/stack.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/stack.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/stack.h
 utility
 -
 internal/stack.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/stack.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/stack.h
 
-/home/sergey/project/ws/wsServer/rapidjson/writer.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/writer.h
 stream.h
-/home/sergey/project/ws/wsServer/rapidjson/stream.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/stream.h
 internal/meta.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/meta.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/meta.h
 internal/stack.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/stack.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/stack.h
 internal/strfunc.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/strfunc.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/strfunc.h
 internal/dtoa.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/dtoa.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/dtoa.h
 internal/itoa.h
-/home/sergey/project/ws/wsServer/rapidjson/internal/itoa.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/internal/itoa.h
 stringbuffer.h
-/home/sergey/project/ws/wsServer/rapidjson/stringbuffer.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/stringbuffer.h
 new
 -
 intrin.h
@@ -282,11 +282,11 @@ emmintrin.h
 arm_neon.h
 -
 
-/home/sergey/project/ws/wsServer/server_ws.hpp
+/home/ssaltykov/project/ws/wsServer/server_ws.hpp
 crypto.hpp
-/home/sergey/project/ws/wsServer/crypto.hpp
+/home/ssaltykov/project/ws/wsServer/crypto.hpp
 utility.hpp
-/home/sergey/project/ws/wsServer/utility.hpp
+/home/ssaltykov/project/ws/wsServer/utility.hpp
 array
 -
 atomic
@@ -318,7 +318,7 @@ boost/regex.hpp
 regex
 -
 
-/home/sergey/project/ws/wsServer/status_code.hpp
+/home/ssaltykov/project/ws/wsServer/status_code.hpp
 map
 -
 string
@@ -328,9 +328,9 @@ unordered_map
 vector
 -
 
-/home/sergey/project/ws/wsServer/utility.hpp
+/home/ssaltykov/project/ws/wsServer/utility.hpp
 status_code.hpp
-/home/sergey/project/ws/wsServer/status_code.hpp
+/home/ssaltykov/project/ws/wsServer/status_code.hpp
 atomic
 -
 iostream
@@ -346,15 +346,15 @@ emmintrin.h
 intrin.h
 -
 
-/home/sergey/project/ws/wsServer/ws_examples.cpp
+/home/ssaltykov/project/ws/wsServer/ws_examples.cpp
 server_ws.hpp
-/home/sergey/project/ws/wsServer/server_ws.hpp
+/home/ssaltykov/project/ws/wsServer/server_ws.hpp
 rapidjson/document.h
-/home/sergey/project/ws/wsServer/rapidjson/document.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/document.h
 rapidjson/writer.h
-/home/sergey/project/ws/wsServer/rapidjson/writer.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/writer.h
 rapidjson/stringbuffer.h
-/home/sergey/project/ws/wsServer/rapidjson/stringbuffer.h
+/home/ssaltykov/project/ws/wsServer/rapidjson/stringbuffer.h
 iostream
 -
 string
