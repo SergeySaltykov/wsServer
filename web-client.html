@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col-md-6 content">
             <h1>Form of calculations</h1>
-            <form role="form">
+            <form role="form" name="calc">
                 <div class="form-group">
                     <label for="inputParam1">Param 1</label>
                     <input type="number" class="form-control" id="inputParam1" placeholder="Enter param 1">
@@ -30,60 +30,74 @@
                     <div class="col-md-6">
                         <h3>Actions</h3>
                         <div class="col-xs-4">
-                            <button type="button" class="btn btn-default btn-block ">
-                                <span>+</span>
-                            </button>
+                            <input type="button"
+                                   name="add"
+                                   class="btn btn-default btn-block"
+                                   value="+"
+                                   onclick="getAction(name);"
+                            />
                         </div>
                         <div class="col-xs-4">
-                            <button type="button" class="btn btn-default btn-block ">
-                                <span>-</span>
-                            </button>
+                            <input type="button"
+                                   class="btn btn-default btn-block"
+                                   value="-"
+                                   name="subtraction"
+                                   onclick="getAction(name);"
+                            />
                         </div>
                         <div class="col-xs-4">
-                            <button type="button" class="btn btn-default btn-block ">
-                                <span>×</span>
-                            </button>
+                            <input type="button"
+                                   class="btn btn-default btn-block"
+                                   value="x"
+                                   name="multiplication"
+                                   onclick="getAction(name);"
+                            />
                         </div>
                     </div>
                 </div>
-                <div class="row mt-20">
-                    <div class="col-md-6">
-                        <div class="col-xs-4">
-                            <button type="button" class="btn btn-default btn-block ">
-                                <span>/</span>
-                            </button>
-                        </div>
-                        <div class="col-xs-4">
-                            <button type="button" class="btn btn-default btn-block ">
-                                <span>x<sup>2</sup></span>
-                            </button>
-                        </div>
-                        <div class="col-xs-4">
-                            <button type="button" class="btn btn-default btn-block ">
-                                <span>sin</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-20">
-                    <div class="col-md-6">
-                        <div class="col-xs-4">
-                            <button type="button" class="btn btn-default btn-block ">
-                                <span>cos</span>
-                            </button>
-                        </div>
-                        <div class="col-xs-4">
-                            <button type="button" class="btn btn-default btn-block ">
-                                <span>x<sup>n</sup></span>
-                            </button>
-                        </div>
-                        <div class="col-xs-4">
-                            <button type="button" class="btn btn-default btn-block ">
-                                <span>log</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+
+
+                <!--<div class="row mt-20">-->
+                    <!--<div class="col-md-6">-->
+                        <!--<div class="col-xs-4">-->
+                            <!--<button type="button" class="btn btn-default btn-block ">-->
+                                <!--<span>/</span>-->
+                            <!--</button>-->
+                        <!--</div>-->
+                        <!--<div class="col-xs-4">-->
+                            <!--<button type="button" class="btn btn-default btn-block ">-->
+                                <!--<span>x<sup>2</sup></span>-->
+                            <!--</button>-->
+                        <!--</div>-->
+                        <!--<div class="col-xs-4">-->
+                            <!--<button type="button" class="btn btn-default btn-block ">-->
+                                <!--<span>sin</span>-->
+                            <!--</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="row mt-20">-->
+                    <!--<div class="col-md-6">-->
+                        <!--<div class="col-xs-4">-->
+                            <!--<button type="button" class="btn btn-default btn-block ">-->
+                                <!--<span>cos</span>-->
+                            <!--</button>-->
+                        <!--</div>-->
+                        <!--<div class="col-xs-4">-->
+                            <!--<button type="button" class="btn btn-default btn-block ">-->
+                                <!--<span>x<sup>n</sup></span>-->
+                            <!--</button>-->
+                        <!--</div>-->
+                        <!--<div class="col-xs-4">-->
+                            <!--<button type="button" class="btn btn-default btn-block ">-->
+                                <!--<span>log</span>-->
+                            <!--</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+
+
                 <div class="row mt-20">
                     <div class="col-xs-4">
                         <button type="submit" class="btn btn-info btn-block bnt-lg text-center">Submit</button>
@@ -146,6 +160,7 @@
 
         webSocket.onclose = function (event) {
             writeResponse("Connection closed");
+            localStorage.removeItem("action")
         };
     }
 
@@ -153,12 +168,14 @@
      * Sends the value of the text input to the server
      */
     function send() {
-        var text = document.getElementById("messageinput").value;
-        webSocket.send(text);
+        // var text = document.getElementById("messageinput").value;
+        webSocket.send(getData());
+        clearLocalStorage();
     }
 
     function closeSocket() {
         webSocket.close();
+        clearLocalStorage();
     }
 
     function writeResponse(text) {
@@ -166,6 +183,31 @@
     }
 
 </script>
+<script>
+    function getAction(inputName) {
+        localStorage.setItem("action", inputName);
+    }
 
+    function getData() {
+        const getParam1 = document.getElementById("inputParam1").value;
+        const getParam2 = document.getElementById("inputParam2").value;
+        const getAction = localStorage.getItem("action");
+        const postData = {
+            x: parseInt(getParam1),
+            y: parseInt(getParam2),
+            action: getAction,
+            id: Math.round(Math.random()*1000),
+        };
+
+        return JSON.stringify(postData);
+    }
+
+    function clearLocalStorage() {
+        if (!localStorage["action"]) {
+            return null;
+        }
+        localStorage.removeItem("action");
+    }
+</script>
 </body>
 </html>
