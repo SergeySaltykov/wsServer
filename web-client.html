@@ -189,7 +189,8 @@
         };
 
         webSocket.onmessage = function (event) {
-            writeResponse(event.data);
+            const value = JSON.parse(event.data);
+            result.value = value.result;
         };
 
         webSocket.onclose = function (event) {
