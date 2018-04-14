@@ -1,3 +1,10 @@
 .mt-20 {
     margin-top: 20px;
 }
+
+.fn {
+    float: none;
+}
+.f-w-b {
+    font-weight: 700;
+}
