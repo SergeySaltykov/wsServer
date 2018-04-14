@@ -17,14 +17,12 @@
             <h1>Form of calculations</h1>
             <form role="form" name="calc">
                 <div class="form-group">
-                    <label for="inputParam1">Param 1</label>
+                    <label for="inputParam1">Param 1*</label>
                     <input type="number" class="form-control" id="inputParam1" placeholder="Enter param 1">
-                    <p class="help-block">help-block 1</p>
                 </div>
                 <div class="form-group">
                     <label for="inputParam2">Param 2</label>
                     <input type="number" class="form-control" id="inputParam2" placeholder="Enter param 2">
-                    <p class="help-block">help-block 2</p>
                 </div>
 
                 <div class="clearfix text-center">
@@ -143,8 +141,6 @@
     </div>
 </div>
 <br>
-<br>
-<br>
 <div>
 </div>
 <!-- Server responses get written here -->
@@ -219,17 +215,30 @@
 
 </script>
 <script>
+    let getParam1 = document.getElementById("inputParam1");
+    let valueParam2 = document.getElementById("inputParam2");
     function getAction(inputName) {
         localStorage.setItem("action", inputName);
     }
+    
+    // function validate() {
+    //     console.log(!getParam1.value);
+    //     if (!getParam1.value) {
+    //         getParam1.parentNode.classList.add('has-error');
+    //         $('label[for="inputParam1"]').addClass('text-danger');
+    //         $('<p class="help-block"></p>').insertAfter(getParam1);
+    //     }
+    //     return null;
+    // }
 
     function getData() {
-        const getParam1 = document.getElementById("inputParam1").value;
-        const valueParam2 = document.getElementById("inputParam2").value;
-        const getParam2 = valueParam2 ? valueParam2 : '1';
+        const getParam2 = valueParam2.value ? valueParam2 : '1';
         const getAction = localStorage.getItem("action");
+
+        validate();
+
         const postData = {
-            x: parseInt(getParam1),
+            x: parseInt(getParam1.value),
             y: parseInt(getParam2),
             action: getAction,
             id: Math.round(Math.random()*1000),

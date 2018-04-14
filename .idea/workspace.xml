@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d43c796a-b3dc-4064-aab3-96d5f68513a2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-client.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-client.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -29,7 +28,7 @@
       <file leaf-file-name="ws_examples.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ws_examples.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
+            <state relative-caret-position="228">
               <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
@@ -41,10 +40,10 @@
       <file leaf-file-name="web-client.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="191" column="49" selection-start-line="191" selection-start-column="49" selection-end-line="191" selection-end-column="49" />
+            <state relative-caret-position="300">
+              <caret line="227" column="63" selection-start-line="227" selection-start-column="63" selection-end-line="227" selection-end-column="63" />
               <folding>
-                <marker date="1523718258965" expanded="true" signature="2824:5686" ph="..." />
+                <marker date="1523722956077" expanded="true" signature="2707:5569" ph="..." />
               </folding>
             </state>
           </provider>
@@ -75,6 +74,7 @@
       <find>result</find>
       <find>clearLocalStorage</find>
       <find>writeResponse</find>
+      <find>getParam1</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -187,7 +187,7 @@
       <workItem from="1523112151721" duration="803000" />
       <workItem from="1523183346100" duration="8650000" />
       <workItem from="1523708754252" duration="4039000" />
-      <workItem from="1523713471836" duration="4786000" />
+      <workItem from="1523713471836" duration="7383000" />
     </task>
     <task id="LOCAL-00001" summary="open socket method">
       <created>1523112887200</created>
@@ -200,7 +200,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28276000" />
+    <option name="totallyTimeSpent" value="30873000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -221,7 +221,7 @@
       <window_info anchor="bottom" id="CMake" order="11" sideWeight="0.4989071" weight="0.4793757" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50054646" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49945354" weight="0.32887402" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49945354" visible="true" weight="0.3277592" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49945354" weight="0.3277592" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49945354" weight="0.32664436" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -293,7 +293,7 @@
         <state relative-caret-position="2040">
           <caret line="136" column="28" selection-start-line="136" selection-start-column="28" selection-end-line="136" selection-end-column="28" />
           <folding>
-            <marker date="1523718258965" expanded="true" signature="2824:5686" ph="..." />
+            <marker date="1523722956077" expanded="true" signature="2707:5569" ph="..." />
           </folding>
         </state>
       </provider>
@@ -310,7 +310,7 @@
         <state relative-caret-position="840">
           <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
           <folding>
-            <marker date="1523718258965" expanded="true" signature="2824:5686" ph="..." />
+            <marker date="1523722956077" expanded="true" signature="2707:5569" ph="..." />
           </folding>
         </state>
       </provider>
@@ -327,7 +327,7 @@
         <state>
           <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
           <folding>
-            <marker date="1523718258965" expanded="true" signature="2824:5686" ph="..." />
+            <marker date="1523722956077" expanded="true" signature="2707:5569" ph="..." />
           </folding>
         </state>
       </provider>
@@ -513,7 +513,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ws_examples.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
+        <state relative-caret-position="228">
           <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
@@ -523,10 +523,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-client.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="191" column="49" selection-start-line="191" selection-start-column="49" selection-end-line="191" selection-end-column="49" />
+        <state relative-caret-position="300">
+          <caret line="227" column="63" selection-start-line="227" selection-start-column="63" selection-end-line="227" selection-end-column="63" />
           <folding>
-            <marker date="1523718258965" expanded="true" signature="2824:5686" ph="..." />
+            <marker date="1523722956077" expanded="true" signature="2707:5569" ph="..." />
           </folding>
         </state>
       </provider>
