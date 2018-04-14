@@ -4,6 +4,8 @@
 #include "rapidjson/stringbuffer.h"
 #include <iostream>
 #include <string>
+#include <math.h>
+#include <stdio.h>
 
 using namespace std;
 
@@ -45,6 +47,18 @@ int main() {
             *send_stream << getResult(x.GetFloat() * y.GetFloat(), id);
         } else if (action == "division") {
             *send_stream << getResult(x.GetFloat() / y.GetFloat(), id);
+        } else if (action == "subtraction"){
+            *send_stream << getResult(x.GetFloat() - y.GetFloat(), id);
+        } else if (action == "rate") {
+            *send_stream << getResult(pow(x.GetFloat(), y.GetFloat()) , id);
+        } else if (action == "root") {
+            *send_stream << getResult(sqrt(x.GetFloat()), id);
+        } else if (action == "exponent") {
+            *send_stream << getResult(exp(x.GetFloat()), id);
+        } else if (action == "log") {
+            *send_stream << getResult(log(x.GetFloat()), id);
+        } else if (action == "rootInN") {
+            *send_stream << getResult(pow(x.GetFloat(), (1/y.GetFloat())), id);
         } else *send_stream << getError("Unknown action", id);
 
 
