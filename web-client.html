@@ -132,6 +132,7 @@
                         >
                             Submit
                         </button>
+                        <div id="action-message" class="text-danger"></div>
                     </div>
                 </div>
                 <div class="row">
@@ -160,6 +161,142 @@
 
 <script src="jquery/jquery-3.3.1.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
+<script>
+    let getParam1 = document.getElementById("inputParam1");
+    let valueParam2 = document.getElementById("inputParam2");
+    let message = $('#action-message');
+    let actionKey = {
+        exponent : 'exponent',
+        root: 'root',
+        log: 'log',
+        rootInN: 'rootInN',
+        add: 'add',
+        multiplication: 'multiplication',
+        division: 'division',
+        subtraction: 'subtraction',
+        rate: 'rate',
+    };
+
+    function getAction(inputName) {
+        message.empty();
+        localStorage.setItem("action", inputName);
+        getActionLocalStorage();
+    }
+
+    function validate() {
+        const err = 'This field is required';
+
+        if (!getParam1.value) {
+            getParam1.parentNode.classList.remove('has-error');
+            $('label[for="inputParam1"]').removeClass('text-danger');
+            $('.help-block').remove();
+            getParam1.parentNode.classList.add('has-error');
+            $('label[for="inputParam1"]').addClass('text-danger');
+            $('<p class="help-block"></p>')
+                .insertAfter(getParam1)
+                .append(err);
+        } else {
+            getParam1.parentNode.classList.remove('has-error');
+            $('label[for="inputParam1"]').removeClass('text-danger');
+            $('.help-block').remove();
+        }
+    }
+
+    function validateValParam2() {
+        if (valueParam2.value) {
+            valueParam2.parentNode.classList.remove('has-error');
+            $('label[for="inputParam2"]').removeClass('text-danger');
+            $('.help-block').remove();
+        }
+    }
+
+    function disabled() {
+        valueParam2.disabled = true;
+        valueParam2.value = '';
+        valueParam2.parentNode.classList.remove('has-error');
+        $('label[for="inputParam2"]').removeClass('text-danger');
+        $('.help-block').remove();
+    }
+
+    function checkValueParam2() {
+        const err = 'For action the field is empty';
+
+        if (!valueParam2.value) {
+            valueParam2.disabled = false;
+            valueParam2.parentNode.classList.remove('has-error');
+            $('label[for="inputParam2"]').removeClass('text-danger');
+            $('.help-block').remove();
+            valueParam2.parentNode.classList.add('has-error');
+            $('label[for="inputParam1"]').addClass('text-danger');
+            $('<p class="help-block"></p>')
+                .insertAfter(valueParam2)
+                .append(err);
+        }else {
+            valueParam2.parentNode.classList.remove('has-error');
+            $('label[for="inputParam2"]').removeClass('text-danger');
+            $('.help-block').remove();
+        }
+    }
+
+    function getActionLocalStorage() {
+        const getKey = localStorage.getItem('action');
+
+        switch (getKey) {
+            case actionKey.exponent:
+                disabled();
+                break;
+            case actionKey.root:
+                disabled();
+                break;
+            case actionKey.log:
+                disabled();
+                break;
+            case actionKey.rootInN:
+                disabled();
+                break;
+            case actionKey.add:
+                checkValueParam2();
+                break;
+            case actionKey.multiplication:
+                checkValueParam2();
+                break;
+            case actionKey.division:
+                checkValueParam2();
+                break;
+            case actionKey.subtraction:
+                checkValueParam2();
+                break;
+            case actionKey.rate:
+                checkValueParam2();
+                break;
+            default:
+                return valueParam2.disabled = false;
+        }
+    }
+
+    function getData() {
+        const getParam2 = valueParam2.value ? valueParam2.value : '1';
+        const getAction = localStorage.getItem("action");
+
+        validate();
+
+        const postData = {
+            x: parseInt(getParam1.value),
+            y: parseInt(getParam2),
+            action: getAction,
+            id: Math.round(Math.random()*1000),
+        };
+
+        return JSON.stringify(postData);
+    }
+
+    function clearLocalStorage() {
+        if (!localStorage["action"]) {
+            return null;
+        }
+        localStorage.removeItem("action");
+    }
+</script>
 
 <!-- Script to utilise the WebSocket -->
 <script type="text/javascript">
@@ -170,6 +307,7 @@
     window.onload = function () {
             // return writeResponse("Connection closed!");
         openSocket();
+        clearLocalStorage();
         writeResponse("Connection open");
     };
 
@@ -210,8 +348,16 @@
      * Sends the value of the text input to the server
      */
     function send() {
-        // var text = document.getElementById("messageinput").value;
-        webSocket.send(getData());
+        if (!getParam1.value) {
+            validate();
+        } else if (!localStorage.getItem('action')) {
+            const actionText  = 'Select an action';
+            message.empty();
+            message.append(actionText);
+        }
+        else {
+            webSocket.send(getData());
+        }
         // clearLocalStorage();
     }
 
@@ -224,139 +370,6 @@
         messages.innerHTML += "<br/>" + text;
     }
 
-</script>
-<script>
-    let getParam1 = document.getElementById("inputParam1");
-    let valueParam2 = document.getElementById("inputParam2");
-    let actionKey = {
-        exponent : 'exponent',
-        root: 'root',
-        log: 'log',
-        rootInN: 'rootInN',
-        add: 'add',
-        multiplication: 'multiplication',
-        division: 'division',
-        subtraction: 'subtraction',
-        rate: 'rate',
-    };
-
-    function getAction(inputName) {
-        localStorage.setItem("action", inputName);
-        getActionLocalStorage();
-    }
-    
-    function validate() {
-        const err = 'This field is required';
-        console.log(1);
-        if (!getParam1.value) {
-            getParam1.parentNode.classList.remove('has-error');
-            $('label[for="inputParam1"]').removeClass('text-danger');
-            $('.help-block').remove();
-            getParam1.parentNode.classList.add('has-error');
-            $('label[for="inputParam1"]').addClass('text-danger');
-            $('<p class="help-block"></p>')
-                .insertAfter(getParam1)
-                .append(err);
-        } else {
-            getParam1.parentNode.classList.remove('has-error');
-            $('label[for="inputParam1"]').removeClass('text-danger');
-            $('.help-block').remove();
-        };
-    }
-
-    function validateValParam2() {
-        if (valueParam2.value) {
-            valueParam2.parentNode.classList.remove('has-error');
-            $('label[for="inputParam2"]').removeClass('text-danger');
-            $('.help-block').remove();
-        }
-        return null;
-    }
-    function disabled() {
-        valueParam2.disabled = true;
-        valueParam2.value = '';
-        valueParam2.parentNode.classList.remove('has-error');
-        $('label[for="inputParam2"]').removeClass('text-danger');
-        $('.help-block').remove();
-    }
-
-    function checkValueParam2() {
-        const err = 'For action the field is empty';
-
-        if (!valueParam2.value) {
-            valueParam2.parentNode.classList.remove('has-error');
-            $('label[for="inputParam2"]').removeClass('text-danger');
-            $('.help-block').remove();
-            valueParam2.parentNode.classList.add('has-error');
-            $('label[for="inputParam1"]').addClass('text-danger');
-            $('<p class="help-block"></p>')
-                .insertAfter(valueParam2)
-                .append(err);
-        }else {
-            valueParam2.parentNode.classList.remove('has-error');
-            $('label[for="inputParam2"]').removeClass('text-danger');
-            $('.help-block').remove();
-        }
-    }
-    
-    function getActionLocalStorage() {
-        const getKey = localStorage.getItem('action');
-
-        switch (getKey) {
-            case actionKey.exponent:
-                disabled();
-                break;
-            case actionKey.root:
-                disabled();
-                break;
-            case actionKey.log:
-                disabled();
-                break;
-            case actionKey.rootInN:
-                disabled();
-                break;
-            case actionKey.add:
-                checkValueParam2();
-                break;
-            case actionKey.multiplication:
-                checkValueParam2();
-                break;
-            case actionKey.division:
-                checkValueParam2();
-                break;
-            case actionKey.subtraction:
-                checkValueParam2();
-                break;
-            case actionKey.rate:
-                checkValueParam2();
-                break;
-            default:
-                return valueParam2.disabled = false;
-        }
-    }
-
-    function getData() {
-        const getParam2 = valueParam2.value ? valueParam2 : '1';
-        const getAction = localStorage.getItem("action");
-
-        validate();
-
-        const postData = {
-            x: parseInt(getParam1.value),
-            y: parseInt(getParam2),
-            action: getAction,
-            id: Math.round(Math.random()*1000),
-        };
-
-        return JSON.stringify(postData);
-    }
-
-    function clearLocalStorage() {
-        if (!localStorage["action"]) {
-            return null;
-        }
-        localStorage.removeItem("action");
-    }
 </script>
 </body>
 </html>
