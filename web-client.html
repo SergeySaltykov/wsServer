@@ -15,6 +15,7 @@
     <div class="row">
         <div class="col-md-6 content">
             <h1>Form of calculations</h1>
+            <span class="f-w-b fs-12">* - this field is required</span>
             <form role="form" name="calc">
                 <div class="form-group">
                     <label for="inputParam1">Param 1*</label>
@@ -26,7 +27,13 @@
                 </div>
                 <div class="form-group">
                     <label for="inputParam2">Param 2</label>
-                    <input type="number" class="form-control" id="inputParam2" placeholder="Enter param 2">
+                    <input type="number"
+                           class="form-control"
+                           id="inputParam2"
+                           placeholder="Enter param 2"
+                           onchange="validateValParam2();"
+
+                    >
                 </div>
 
                 <div class="clearfix text-center">
@@ -163,7 +170,7 @@
     window.onload = function () {
             // return writeResponse("Connection closed!");
         openSocket();
-        writeResponse("Connection open");;
+        writeResponse("Connection open");
     };
 
     function openSocket() {
@@ -226,7 +233,13 @@
         root: 'root',
         log: 'log',
         rootInN: 'rootInN',
+        add: 'add',
+        multiplication: 'multiplication',
+        division: 'division',
+        subtraction: 'subtraction',
+        rate: 'rate',
     };
+
     function getAction(inputName) {
         localStorage.setItem("action", inputName);
         getActionLocalStorage();
@@ -236,6 +249,9 @@
         const err = 'This field is required';
         console.log(1);
         if (!getParam1.value) {
+            getParam1.parentNode.classList.remove('has-error');
+            $('label[for="inputParam1"]').removeClass('text-danger');
+            $('.help-block').remove();
             getParam1.parentNode.classList.add('has-error');
             $('label[for="inputParam1"]').addClass('text-danger');
             $('<p class="help-block"></p>')
@@ -248,9 +264,39 @@
         };
     }
 
+    function validateValParam2() {
+        if (valueParam2.value) {
+            valueParam2.parentNode.classList.remove('has-error');
+            $('label[for="inputParam2"]').removeClass('text-danger');
+            $('.help-block').remove();
+        }
+        return null;
+    }
     function disabled() {
         valueParam2.disabled = true;
         valueParam2.value = '';
+        valueParam2.parentNode.classList.remove('has-error');
+        $('label[for="inputParam2"]').removeClass('text-danger');
+        $('.help-block').remove();
+    }
+
+    function checkValueParam2() {
+        const err = 'For action the field is empty';
+
+        if (!valueParam2.value) {
+            valueParam2.parentNode.classList.remove('has-error');
+            $('label[for="inputParam2"]').removeClass('text-danger');
+            $('.help-block').remove();
+            valueParam2.parentNode.classList.add('has-error');
+            $('label[for="inputParam1"]').addClass('text-danger');
+            $('<p class="help-block"></p>')
+                .insertAfter(valueParam2)
+                .append(err);
+        }else {
+            valueParam2.parentNode.classList.remove('has-error');
+            $('label[for="inputParam2"]').removeClass('text-danger');
+            $('.help-block').remove();
+        }
     }
     
     function getActionLocalStorage() {
@@ -259,19 +305,30 @@
         switch (getKey) {
             case actionKey.exponent:
                 disabled();
-                console.log(1);
                 break;
             case actionKey.root:
                 disabled();
-                console.log(2);
                 break;
             case actionKey.log:
                 disabled();
-                console.log(3);
                 break;
             case actionKey.rootInN:
                 disabled();
-                console.log(4);
+                break;
+            case actionKey.add:
+                checkValueParam2();
+                break;
+            case actionKey.multiplication:
+                checkValueParam2();
+                break;
+            case actionKey.division:
+                checkValueParam2();
+                break;
+            case actionKey.subtraction:
+                checkValueParam2();
+                break;
+            case actionKey.rate:
+                checkValueParam2();
                 break;
             default:
                 return valueParam2.disabled = false;
