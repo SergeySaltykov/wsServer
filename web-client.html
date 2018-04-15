@@ -18,7 +18,11 @@
             <form role="form" name="calc">
                 <div class="form-group">
                     <label for="inputParam1">Param 1*</label>
-                    <input type="number" class="form-control" id="inputParam1" placeholder="Enter param 1">
+                    <input type="number"
+                           class="form-control"
+                           id="inputParam1"
+                           placeholder="Enter param 1"
+                           onchange="validate();">
                 </div>
                 <div class="form-group">
                     <label for="inputParam2">Param 2</label>
@@ -217,19 +221,62 @@
 <script>
     let getParam1 = document.getElementById("inputParam1");
     let valueParam2 = document.getElementById("inputParam2");
+    let actionKey = {
+        exponent : 'exponent',
+        root: 'root',
+        log: 'log',
+        rootInN: 'rootInN',
+    };
     function getAction(inputName) {
         localStorage.setItem("action", inputName);
+        getActionLocalStorage();
     }
     
-    // function validate() {
-    //     console.log(!getParam1.value);
-    //     if (!getParam1.value) {
-    //         getParam1.parentNode.classList.add('has-error');
-    //         $('label[for="inputParam1"]').addClass('text-danger');
-    //         $('<p class="help-block"></p>').insertAfter(getParam1);
-    //     }
-    //     return null;
-    // }
+    function validate() {
+        const err = 'This field is required';
+        console.log(1);
+        if (!getParam1.value) {
+            getParam1.parentNode.classList.add('has-error');
+            $('label[for="inputParam1"]').addClass('text-danger');
+            $('<p class="help-block"></p>')
+                .insertAfter(getParam1)
+                .append(err);
+        } else {
+            getParam1.parentNode.classList.remove('has-error');
+            $('label[for="inputParam1"]').removeClass('text-danger');
+            $('.help-block').remove();
+        };
+    }
+
+    function disabled() {
+        valueParam2.disabled = true;
+        valueParam2.value = '';
+    }
+    
+    function getActionLocalStorage() {
+        const getKey = localStorage.getItem('action');
+
+        switch (getKey) {
+            case actionKey.exponent:
+                disabled();
+                console.log(1);
+                break;
+            case actionKey.root:
+                disabled();
+                console.log(2);
+                break;
+            case actionKey.log:
+                disabled();
+                console.log(3);
+                break;
+            case actionKey.rootInN:
+                disabled();
+                console.log(4);
+                break;
+            default:
+                return valueParam2.disabled = false;
+        }
+    }
 
     function getData() {
         const getParam2 = valueParam2.value ? valueParam2 : '1';
