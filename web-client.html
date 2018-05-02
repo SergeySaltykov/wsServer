@@ -122,6 +122,34 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row mt-20">
+                        <div class="col-md-6 center-block fn">
+                            <div class="col-xs-4">
+                                <input type="button"
+                                       class="btn btn-default btn-block f-w-b"
+                                       value="sin(x)"
+                                       name="sin"
+                                       onclick="getAction(name);"
+                                />
+                            </div>
+                            <div class="col-xs-4">
+                                <input type="button"
+                                       class="btn btn-default btn-block f-w-b"
+                                       value="cos(x)"
+                                       name="cos"
+                                       onclick="getAction(name);"
+                                />
+                            </div>
+                            <div class="col-xs-4">
+                                <input type="button"
+                                       class="btn btn-default btn-block f-w-b"
+                                       value="tg(x)"
+                                       name="tg"
+                                       onclick="getAction(name);"
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="row mt-20">
                     <div class="col-xs-4 center-block fn">
@@ -175,6 +203,9 @@
         division: 'division',
         subtraction: 'subtraction',
         rate: 'rate',
+        sin: 'sin',
+        cos: 'cos',
+        tg: 'tg',
     };
 
     function getAction(inputName) {
@@ -268,6 +299,15 @@
                 break;
             case actionKey.rate:
                 checkValueParam2();
+                break;
+            case actionKey.sin:
+                disabled();
+                break;
+            case actionKey.cos:
+                disabled();
+                break;
+            case actionKey.tg:
+                disabled();
                 break;
             default:
                 return valueParam2.disabled = false;

@@ -6,10 +6,11 @@
 #include <string>
 #include <math.h>
 #include <stdio.h>
+#define PI 3.14159265
 
 using namespace std;
 
-string getResult(float value, int requestID);
+string getResult(double value, int requestID);
 
 string getError(const string &errorMessage, int requestID);
 
@@ -59,6 +60,12 @@ int main() {
             *send_stream << getResult(log(x.GetFloat()), id);
         } else if (action == "rootInN") {
             *send_stream << getResult(pow(x.GetFloat(), (1/y.GetFloat())), id);
+        } else if (action == "sin") {
+            *send_stream << getResult(sin(x.GetFloat() * PI / 180), id);
+        } else if (action == "cos") {
+            *send_stream << getResult(cos(x.GetFloat() * PI / 180), id);
+        }  else if (action == "tg") {
+            *send_stream << getResult(tan(x.GetFloat() * PI / 180), id);
         } else *send_stream << getError("Unknown action", id);
 
 
@@ -109,7 +116,7 @@ int main() {
 
 }
 
-string getResult(float value, int requestID) {
+string getResult(double value, int requestID) {
     return R"({"result":")" + ::to_string(value) + R"(","id":)" + ::to_string(requestID) + "}";
 }
 
