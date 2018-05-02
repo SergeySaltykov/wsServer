@@ -335,7 +335,8 @@
 
         webSocket.onmessage = function (event) {
             const value = JSON.parse(event.data);
-            result.value = value.result;
+            console.log(value);
+            result.value = parseFloat(value.result);
         };
 
         webSocket.onclose = function (event) {
